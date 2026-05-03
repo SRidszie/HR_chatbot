@@ -1,0 +1,132 @@
+version: '3.1'
+session_config:
+  session_expiration_time: 30
+  carry_over_slots_to_new_session: true
+
+
+intents:
+  - greet
+  - job_candidate
+  - partner_collaborate
+  - client_support
+  - services
+  - solutions
+  - expert_speak
+  - expert_yes
+  - expert_no
+  - contact_us
+  - goodbye
+  - ams
+  - out_of_scope
+
+entities:
+- service_type
+- user_name
+- business_email
+- phone
+
+slots:
+  user_name:
+    type: text
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: speak_with_expert_form
+        requested_slot: user_name
+
+  business_email:
+    type: text
+    mappings:
+      - type: from_text
+        conditions:
+        - active_loop: speak_with_expert_form
+          requested_slot: business_email
+
+  phone_no:
+    type: text
+    mappings:
+      - type: from_text
+        conditions:
+        - active_loop: speak_with_expert_form
+          requested_slot: phone_no
+
+  enquiry_type:
+    type: text
+    mappings:
+      - type: from_text
+        conditions:
+        - active_loop: speak_with_expert_form
+          requested_slot: enquiry_type
+
+forms:
+  speak_with_expert_form:
+    required_slots:
+      - user_name
+      - business_email
+      - phone_no
+      - enquiry_type
+
+actions:
+- action_greet
+- action_services
+# - validate_speak_with_expert_form
+- utter_slots_values
+- utter_submit
+- action_ams
+responses:
+
+  # utter_greet:
+  #   - text: "Hi there! I am Nityo Infotech virtual assistant. How can I help you today? Select a category below that best fits your needs to proceed:"
+  #     buttons:
+  #       - title: "Candidate looking for Job"
+  #         payload: '/job_application{"PRODUCT":"job_application"}'
+  #       - title: "Partner looking to Collaborate"
+  #         payload: '/partner_collaboration{"PRODUCT":"partner_collaboration"}'
+  #       - title: "Client looking for Support"
+  #         payload: '/client_support{"PRODUCT":"client_support"}'
+  #       - title: "Services"
+  #         payload: '/services{"PRODUCT":"services"}'
+  #       - title: "Solutions"
+  #         payload: '/solutions{"PRODUCT":"solutions"}'
+  utter_submit:
+  - text: Thank you for submitting the form. We will get in touch with you soon........
+  utter_ask_speak_with_expert_form_user_name:
+  - text: May I know your name please?
+  utter_ask_speak_with_expert_form_business_email:
+  - text: Can you please share your business email ID? Trust us, we will never spam!
+  utter_ask__speak_with_expert_form_phone_no:
+  - text: Can I have your phone number please!
+  utter_ask__speak_with_expert_form_enquiry_type:
+  - text: Can you tell us which kind of offering your are interested in?
+  utter_ams:
+  - text: "Great, you can read more about AMS here: https://nityo.com/ams"
+  # utter_link:
+  # - text: "Please click this link [Google Website](https://www.google.com/)." 
+  utter_slots_values:
+    - text: We appreciate your message and our team will respond to you shortly.....
+        # user_name: {user_name} 
+        # business_email: {business_email} 
+        # phone_no: {phone_no} 
+        # service_type: {service_type}
+  utter_expert_query:
+  - text: Please provide your name, business email, phone number, and service type so we can connect you with an expert.
+  # utter_form_submit:
+  # - text: Thank you for submitting the form. We will get in touch with you soon........
+  utter_expert_yes:
+  - text: Please provide us with some details by filling out this form.
+    buttons:
+    - title: Contact Us
+      payload: /contact_us
+  utter_goodbye:
+  - text: Bye
+  utter_out_of_scope:
+  - text: Sorry, I can't handle that request.
+
+  utter_please_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+
+  utter_ask_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+
+  utter_default:
+  - text: Sorry I didn't get that. Can you please rephrase?

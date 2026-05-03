@@ -1,0 +1,926 @@
+C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\sanic_cors\extension.py:39: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  SANIC_VERSION = LooseVersion(sanic_version)
+2023-02-17 18:47:21 INFO     rasa_sdk.endpoint  - Starting action endpoint C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\sanic_cors\extension.py:39: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  SANIC_VERSION = LooseVersion(sanic_version)
+C:\Users\admin\AppData\Roaming\Python\Python37\site-packages\redis\connection.py:68: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  hiredis_version = StrictVersion(hiredis.__version__)
+C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\matplotlib\__init__.py:169: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  if LooseVersion(module.__version__) < minver:
+C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\setuptools\_distutils\version.py:346: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  other = LooseVersion(other)
+2023-02-17 18:47:31 INFO     root  - Starting Rasa server on http://0.0.0.0:5005
+C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\tracker_store.py:1005: SADeprecationWarning: Calling URL() directly is deprecated and will be disabled in a future release.  The public constructor for URL is now the URL.create() method.
+  query=query,
+2023-02-17 18:47:34 INFO     rasa.core.processor  - Loading model models\20230217-184353-persistent-hyperparameter.tar.gz...
+2023-02-17 18:47:34 INFO     rasa.nlu.utils.spacy_utils  - Trying to load SpaCy model with name 'en_core_web_md'.
+2023-02-17 18:47:40 INFO     rasa.nlu.utils.spacy_utils  - Trying to load SpaCy model with name 'en_core_web_md'.
+C:\Users\admin\AppData\Roaming\Python\Python37\site-packages\jsonpickle\ext\numpy.py:192: DeprecationWarning: `np.object` is a deprecated alias for the builtin `object`. To silence this warning, use `object` by itself. Doing this will not modify any behavior and is safe. 
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if dtype == np.object:
+[93mC:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\utils\train_utils.py:531: UserWarning: constrain_similarities is set to `False`. It is recommended to set it to `True` when using cross-entropy loss.
+  category=UserWarning,
+[0m[2023-02-17 18:48:11 +0530] [2728] [ERROR] Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1204, in run
+    serve_single(server_settings)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\sanic\server\runners.py", line 206, in serve_single
+    serve(**server_settings)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\sanic\server\runners.py", line 130, in serve
+    loop.run_until_complete(app._server_event("init", "before"))
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 574, in run_until_complete
+    self.run_forever()
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 541, in run_forever
+    self._run_once()
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1786, in _run_once
+    handle._run()
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 2007, in _server_event
+    "loop": loop,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\sanic\signals.py", line 191, in dispatch
+    return await dispatch
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\sanic\signals.py", line 161, in _dispatch
+    retval = await maybe_coroutine
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1524, in _listener
+    await maybe_coro
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\run.py", line 251, in load_agent_on_start
+    loop=loop,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\agent.py", line 254, in load_agent
+    agent.load_model(model_path)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\agent.py", line 358, in load_model
+    http_interpreter=self.http_interpreter,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\processor.py", line 97, in __init__
+    model_path
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\processor.py", line 126, in _load_model
+    DaskGraphRunner,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\engine\loader.py", line 33, in load_predict_graph_runner
+    graph_schema=model_metadata.predict_schema, model_id=model_metadata.model_id
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\engine\runner\dask.py", line 51, in create
+    return cls(graph_schema, model_storage, execution_context, hooks)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\engine\runner\dask.py", line 38, in __init__
+    graph_schema, model_storage, execution_context, hooks
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\engine\runner\dask.py", line 64, in _instantiate_nodes
+    for node_name, schema_node in graph_schema.nodes.items()
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\engine\runner\dask.py", line 64, in <dictcomp>
+    for node_name, schema_node in graph_schema.nodes.items()
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\engine\graph.py", line 545, in from_schema_node
+    hooks=hooks,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\engine\graph.py", line 379, in __init__
+    self._load_component()
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\engine\graph.py", line 395, in _load_component
+    **kwargs,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\policies\ted_policy.py", line 1054, in load
+    model_path, config, model_storage, resource, execution_context
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\policies\ted_policy.py", line 1102, in _load
+    execution_context.is_finetuning,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\policies\ted_policy.py", line 1157, in _load_tf_model
+    finetune_mode=should_finetune,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\utils\tensorflow\models.py", line 431, in load
+    model.fit(data_generator, verbose=False)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\keras\utils\traceback_utils.py", line 64, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\utils\tensorflow\temp_keras_modules.py", line 388, in fit
+    tmp_logs = self.train_function(iterator)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\util\traceback_utils.py", line 150, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\def_function.py", line 915, in __call__
+    result = self._call(*args, **kwds)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\def_function.py", line 963, in _call
+    self._initialize(args, kwds, add_initializers_to=initializers)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\def_function.py", line 786, in _initialize
+    *args, **kwds))
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\function.py", line 2983, in _get_concrete_function_internal_garbage_collected
+    graph_function, _ = self._maybe_define_function(args, kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\function.py", line 3292, in _maybe_define_function
+    graph_function = self._create_graph_function(args, kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\function.py", line 3140, in _create_graph_function
+    capture_by_value=self._capture_by_value),
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\framework\func_graph.py", line 1161, in func_graph_from_py_func
+    func_outputs = python_func(*func_args, **func_kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\def_function.py", line 677, in wrapped_fn
+    out = weak_wrapped_fn().__wrapped__(*args, **kwds)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\framework\func_graph.py", line 1143, in autograph_handler
+    user_requested=True,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 439, in converted_call
+    result = converted_f(*effective_args, **kwargs)
+  File "C:\Users\admin\AppData\Local\Temp\__autograph_generated_fileco1zx35_.py", line 15, in tf__train_function
+    retval_ = ag__.converted_call(ag__.ld(step_function), (ag__.ld(self), ag__.ld(iterator)), None, fscope)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 377, in converted_call
+    return _call_unconverted(f, args, kwargs, options)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 459, in _call_unconverted
+    return f(*args)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\keras\engine\training.py", line 1010, in step_function
+    outputs = model.distribute_strategy.run(run_step, args=(data,))
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\distribute\distribute_lib.py", line 1312, in run
+    return self._extended.call_for_each_replica(fn, args=args, kwargs=kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\distribute\distribute_lib.py", line 2888, in call_for_each_replica
+    return self._call_for_each_replica(fn, args, kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\distribute\distribute_lib.py", line 3689, in _call_for_each_replica
+    return fn(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 689, in wrapper
+    return converted_call(f, args, kwargs, options=options)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 377, in converted_call
+    return _call_unconverted(f, args, kwargs, options)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 458, in _call_unconverted
+    return f(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\keras\engine\training.py", line 1000, in run_step
+    outputs = model.train_step(data)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\utils\tensorflow\models.py", line 151, in train_step
+    prediction_loss = self.batch_loss(batch_in)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\policies\ted_policy.py", line 1998, in batch_loss
+    ) = self._embed_dialogue(dialogue_in, tf_batch_data)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\policies\ted_policy.py", line 1441, in _embed_dialogue
+    ](dialogue_in, 1 - mask, self._training)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\keras\utils\traceback_utils.py", line 64, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\keras\engine\base_layer.py", line 1096, in __call__
+    outputs = call_fn(inputs, *args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\keras\utils\traceback_utils.py", line 92, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 689, in wrapper
+    return converted_call(f, args, kwargs, options=options)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 439, in converted_call
+    result = converted_f(*effective_args, **kwargs)
+  File "C:\Users\admin\AppData\Local\Temp\__autograph_generated_file8cuvjben.py", line 66, in tf__call
+    ag__.for_stmt(ag__.ld(self)._enc_layers, None, loop_body, get_state_2, set_state_2, ('x',), {'iterate_names': 'layer'})
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\operators\control_flow.py", line 440, in for_stmt
+    _py_for_stmt(iter_, extra_test, body, None, None)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\operators\control_flow.py", line 489, in _py_for_stmt
+    body(target)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\operators\control_flow.py", line 455, in protected_body
+    original_body(protected_iter)
+  File "C:\Users\admin\AppData\Local\Temp\__autograph_generated_file8cuvjben.py", line 62, in loop_body
+    (x, attn_weights) = ag__.converted_call(ag__.ld(layer), (ag__.ld(x),), dict(pad_mask=ag__.ld(pad_mask), training=ag__.ld(training)), fscope)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 377, in converted_call
+    return _call_unconverted(f, args, kwargs, options)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 458, in _call_unconverted
+    return f(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\keras\utils\traceback_utils.py", line 64, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\keras\engine\base_layer.py", line 1096, in __call__
+    outputs = call_fn(inputs, *args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\keras\utils\traceback_utils.py", line 92, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 689, in wrapper
+    return converted_call(f, args, kwargs, options=options)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 439, in converted_call
+    result = converted_f(*effective_args, **kwargs)
+  File "C:\Users\admin\AppData\Local\Temp\__autograph_generated_file9cnzbvwp.py", line 46, in tf__call
+    ag__.for_stmt(ag__.ld(self)._ffn_layers, None, loop_body, get_state_1, set_state_1, ('ffn_out',), {'iterate_names': 'layer'})
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\operators\control_flow.py", line 440, in for_stmt
+    _py_for_stmt(iter_, extra_test, body, None, None)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\operators\control_flow.py", line 489, in _py_for_stmt
+    body(target)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\operators\control_flow.py", line 455, in protected_body
+    original_body(protected_iter)
+  File "C:\Users\admin\AppData\Local\Temp\__autograph_generated_file9cnzbvwp.py", line 44, in loop_body
+    ffn_out = ag__.converted_call(ag__.ld(layer), (ag__.ld(ffn_out),), dict(training=ag__.ld(training)), fscope)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 377, in converted_call
+    return _call_unconverted(f, args, kwargs, options)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 458, in _call_unconverted
+    return f(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\keras\utils\traceback_utils.py", line 64, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\keras\engine\base_layer.py", line 1089, in __call__
+    self._maybe_build(inputs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\keras\engine\base_layer.py", line 2742, in _maybe_build
+    self.build(input_shapes)  # pylint:disable=not-callable
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\utils\tensorflow\layers.py", line 291, in build
+    super().build(input_shape)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\keras\layers\core\dense.py", line 159, in build
+    trainable=True)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\keras\engine\base_layer.py", line 694, in add_weight
+    caching_device=caching_device)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\training\tracking\base.py", line 920, in _add_variable_with_custom_getter
+    **kwargs_for_getter)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\keras\engine\base_layer_utils.py", line 129, in make_variable
+    shape=variable_shape if variable_shape else None)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\util\traceback_utils.py", line 150, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\variables.py", line 265, in __call__
+    return cls._variable_v1_call(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\variables.py", line 225, in _variable_v1_call
+    shape=shape)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\variables.py", line 65, in getter
+    return captured_getter(captured_previous, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\distribute\distribute_lib.py", line 3604, in creator
+    return next_creator(**kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\variables.py", line 65, in getter
+    return captured_getter(captured_previous, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\distribute\distribute_lib.py", line 3604, in creator
+    return next_creator(**kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\variables.py", line 65, in getter
+    return captured_getter(captured_previous, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\distribute\distribute_lib.py", line 3604, in creator
+    return next_creator(**kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\variables.py", line 65, in getter
+    return captured_getter(captured_previous, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\def_function.py", line 774, in variable_capturing_scope
+    lifted_initializer_graph=lifted_initializer_graph, **kwds)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\util\traceback_utils.py", line 150, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\variables.py", line 269, in __call__
+    return super(VariableMetaclass, cls).__call__(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\def_function.py", line 296, in __init__
+    initial_value = initial_value()
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\keras\initializers\initializers_v2.py", line 145, in __call__
+    return tf.zeros(shape, dtype)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\util\traceback_utils.py", line 150, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\util\dispatch.py", line 1082, in op_dispatch_handler
+    return dispatch_target(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\array_ops.py", line 2927, in wrapped
+    tensor = fun(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\array_ops.py", line 2982, in zeros
+    tensor_shape.TensorShape(shape))
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\framework\constant_op.py", line 379, in _tensor_shape_tensor_conversion_function
+    return constant(s_list, dtype=dtype, name=name)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\framework\constant_op.py", line 268, in constant
+    allow_broadcast=True)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\framework\constant_op.py", line 279, in _constant_impl
+    return _constant_eager_impl(ctx, value, dtype, shape, verify_shape)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\framework\constant_op.py", line 304, in _constant_eager_impl
+    t = convert_to_eager_tensor(value, ctx, dtype)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\framework\constant_op.py", line 102, in convert_to_eager_tensor
+    return ops.EagerTensor(value, ctx.device_name, dtype)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\admin\anaconda3\envs\rasa\Scripts\rasa.exe\__main__.py", line 7, in <module>
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\__main__.py", line 125, in main
+    cmdline_arguments.func(cmdline_arguments)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\cli\run.py", line 93, in run
+    rasa.run(**vars(args))
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\api.py", line 61, in run
+    **kwargs,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\run.py", line 230, in serve_application
+    workers=number_of_workers,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1204, in run
+    serve_single(server_settings)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\sanic\server\runners.py", line 206, in serve_single
+    serve(**server_settings)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\sanic\server\runners.py", line 130, in serve
+    loop.run_until_complete(app._server_event("init", "before"))
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 574, in run_until_complete
+    self.run_forever()
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 541, in run_forever
+    self._run_once()
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1786, in _run_once
+    handle._run()
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 2007, in _server_event
+    "loop": loop,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\sanic\signals.py", line 191, in dispatch
+    return await dispatch
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\sanic\signals.py", line 161, in _dispatch
+    retval = await maybe_coroutine
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1524, in _listener
+    await maybe_coro
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\run.py", line 251, in load_agent_on_start
+    loop=loop,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\agent.py", line 254, in load_agent
+    agent.load_model(model_path)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\agent.py", line 358, in load_model
+    http_interpreter=self.http_interpreter,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\processor.py", line 97, in __init__
+    model_path
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\processor.py", line 126, in _load_model
+    DaskGraphRunner,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\engine\loader.py", line 33, in load_predict_graph_runner
+    graph_schema=model_metadata.predict_schema, model_id=model_metadata.model_id
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\engine\runner\dask.py", line 51, in create
+    return cls(graph_schema, model_storage, execution_context, hooks)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\engine\runner\dask.py", line 38, in __init__
+    graph_schema, model_storage, execution_context, hooks
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\engine\runner\dask.py", line 64, in _instantiate_nodes
+    for node_name, schema_node in graph_schema.nodes.items()
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\engine\runner\dask.py", line 64, in <dictcomp>
+    for node_name, schema_node in graph_schema.nodes.items()
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\engine\graph.py", line 545, in from_schema_node
+    hooks=hooks,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\engine\graph.py", line 379, in __init__
+    self._load_component()
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\engine\graph.py", line 395, in _load_component
+    **kwargs,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\policies\ted_policy.py", line 1054, in load
+    model_path, config, model_storage, resource, execution_context
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\policies\ted_policy.py", line 1102, in _load
+    execution_context.is_finetuning,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\policies\ted_policy.py", line 1157, in _load_tf_model
+    finetune_mode=should_finetune,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\utils\tensorflow\models.py", line 431, in load
+    model.fit(data_generator, verbose=False)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\keras\utils\traceback_utils.py", line 64, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\utils\tensorflow\temp_keras_modules.py", line 388, in fit
+    tmp_logs = self.train_function(iterator)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\util\traceback_utils.py", line 150, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\def_function.py", line 915, in __call__
+    result = self._call(*args, **kwds)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\def_function.py", line 963, in _call
+    self._initialize(args, kwds, add_initializers_to=initializers)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\def_function.py", line 786, in _initialize
+    *args, **kwds))
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\function.py", line 2983, in _get_concrete_function_internal_garbage_collected
+    graph_function, _ = self._maybe_define_function(args, kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\function.py", line 3292, in _maybe_define_function
+    graph_function = self._create_graph_function(args, kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\function.py", line 3140, in _create_graph_function
+    capture_by_value=self._capture_by_value),
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\framework\func_graph.py", line 1161, in func_graph_from_py_func
+    func_outputs = python_func(*func_args, **func_kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\def_function.py", line 677, in wrapped_fn
+    out = weak_wrapped_fn().__wrapped__(*args, **kwds)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\framework\func_graph.py", line 1143, in autograph_handler
+    user_requested=True,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 439, in converted_call
+    result = converted_f(*effective_args, **kwargs)
+  File "C:\Users\admin\AppData\Local\Temp\__autograph_generated_fileco1zx35_.py", line 15, in tf__train_function
+    retval_ = ag__.converted_call(ag__.ld(step_function), (ag__.ld(self), ag__.ld(iterator)), None, fscope)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 377, in converted_call
+    return _call_unconverted(f, args, kwargs, options)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 459, in _call_unconverted
+    return f(*args)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\keras\engine\training.py", line 1010, in step_function
+    outputs = model.distribute_strategy.run(run_step, args=(data,))
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\distribute\distribute_lib.py", line 1312, in run
+    return self._extended.call_for_each_replica(fn, args=args, kwargs=kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\distribute\distribute_lib.py", line 2888, in call_for_each_replica
+    return self._call_for_each_replica(fn, args, kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\distribute\distribute_lib.py", line 3689, in _call_for_each_replica
+    return fn(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 689, in wrapper
+    return converted_call(f, args, kwargs, options=options)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 377, in converted_call
+    return _call_unconverted(f, args, kwargs, options)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 458, in _call_unconverted
+    return f(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\keras\engine\training.py", line 1000, in run_step
+    outputs = model.train_step(data)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\utils\tensorflow\models.py", line 151, in train_step
+    prediction_loss = self.batch_loss(batch_in)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\policies\ted_policy.py", line 1998, in batch_loss
+    ) = self._embed_dialogue(dialogue_in, tf_batch_data)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\policies\ted_policy.py", line 1441, in _embed_dialogue
+    ](dialogue_in, 1 - mask, self._training)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\keras\utils\traceback_utils.py", line 64, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\keras\engine\base_layer.py", line 1096, in __call__
+    outputs = call_fn(inputs, *args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\keras\utils\traceback_utils.py", line 92, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 689, in wrapper
+    return converted_call(f, args, kwargs, options=options)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 439, in converted_call
+    result = converted_f(*effective_args, **kwargs)
+  File "C:\Users\admin\AppData\Local\Temp\__autograph_generated_file8cuvjben.py", line 66, in tf__call
+    ag__.for_stmt(ag__.ld(self)._enc_layers, None, loop_body, get_state_2, set_state_2, ('x',), {'iterate_names': 'layer'})
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\operators\control_flow.py", line 440, in for_stmt
+    _py_for_stmt(iter_, extra_test, body, None, None)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\operators\control_flow.py", line 489, in _py_for_stmt
+    body(target)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\operators\control_flow.py", line 455, in protected_body
+    original_body(protected_iter)
+  File "C:\Users\admin\AppData\Local\Temp\__autograph_generated_file8cuvjben.py", line 62, in loop_body
+    (x, attn_weights) = ag__.converted_call(ag__.ld(layer), (ag__.ld(x),), dict(pad_mask=ag__.ld(pad_mask), training=ag__.ld(training)), fscope)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 377, in converted_call
+    return _call_unconverted(f, args, kwargs, options)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 458, in _call_unconverted
+    return f(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\keras\utils\traceback_utils.py", line 64, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\keras\engine\base_layer.py", line 1096, in __call__
+    outputs = call_fn(inputs, *args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\keras\utils\traceback_utils.py", line 92, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 689, in wrapper
+    return converted_call(f, args, kwargs, options=options)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 439, in converted_call
+    result = converted_f(*effective_args, **kwargs)
+  File "C:\Users\admin\AppData\Local\Temp\__autograph_generated_file9cnzbvwp.py", line 46, in tf__call
+    ag__.for_stmt(ag__.ld(self)._ffn_layers, None, loop_body, get_state_1, set_state_1, ('ffn_out',), {'iterate_names': 'layer'})
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\operators\control_flow.py", line 440, in for_stmt
+    _py_for_stmt(iter_, extra_test, body, None, None)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\operators\control_flow.py", line 489, in _py_for_stmt
+    body(target)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\operators\control_flow.py", line 455, in protected_body
+    original_body(protected_iter)
+  File "C:\Users\admin\AppData\Local\Temp\__autograph_generated_file9cnzbvwp.py", line 44, in loop_body
+    ffn_out = ag__.converted_call(ag__.ld(layer), (ag__.ld(ffn_out),), dict(training=ag__.ld(training)), fscope)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 377, in converted_call
+    return _call_unconverted(f, args, kwargs, options)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 458, in _call_unconverted
+    return f(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\keras\utils\traceback_utils.py", line 64, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\keras\engine\base_layer.py", line 1089, in __call__
+    self._maybe_build(inputs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\keras\engine\base_layer.py", line 2742, in _maybe_build
+    self.build(input_shapes)  # pylint:disable=not-callable
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\utils\tensorflow\layers.py", line 291, in build
+    super().build(input_shape)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\keras\layers\core\dense.py", line 159, in build
+    trainable=True)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\keras\engine\base_layer.py", line 694, in add_weight
+    caching_device=caching_device)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\training\tracking\base.py", line 920, in _add_variable_with_custom_getter
+    **kwargs_for_getter)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\keras\engine\base_layer_utils.py", line 129, in make_variable
+    shape=variable_shape if variable_shape else None)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\util\traceback_utils.py", line 150, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\variables.py", line 265, in __call__
+    return cls._variable_v1_call(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\variables.py", line 225, in _variable_v1_call
+    shape=shape)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\variables.py", line 65, in getter
+    return captured_getter(captured_previous, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\distribute\distribute_lib.py", line 3604, in creator
+    return next_creator(**kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\variables.py", line 65, in getter
+    return captured_getter(captured_previous, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\distribute\distribute_lib.py", line 3604, in creator
+    return next_creator(**kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\variables.py", line 65, in getter
+    return captured_getter(captured_previous, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\distribute\distribute_lib.py", line 3604, in creator
+    return next_creator(**kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\variables.py", line 65, in getter
+    return captured_getter(captured_previous, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\def_function.py", line 774, in variable_capturing_scope
+    lifted_initializer_graph=lifted_initializer_graph, **kwds)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\util\traceback_utils.py", line 150, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\variables.py", line 269, in __call__
+    return super(VariableMetaclass, cls).__call__(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\def_function.py", line 296, in __init__
+    initial_value = initial_value()
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\keras\initializers\initializers_v2.py", line 145, in __call__
+    return tf.zeros(shape, dtype)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\util\traceback_utils.py", line 150, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\util\dispatch.py", line 1082, in op_dispatch_handler
+    return dispatch_target(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\array_ops.py", line 2927, in wrapped
+    tensor = fun(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\array_ops.py", line 2982, in zeros
+    tensor_shape.TensorShape(shape))
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\framework\constant_op.py", line 379, in _tensor_shape_tensor_conversion_function
+    return constant(s_list, dtype=dtype, name=name)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\framework\constant_op.py", line 268, in constant
+    allow_broadcast=True)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\framework\constant_op.py", line 279, in _constant_impl
+    return _constant_eager_impl(ctx, value, dtype, shape, verify_shape)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\framework\constant_op.py", line 304, in _constant_eager_impl
+    t = convert_to_eager_tensor(value, ctx, dtype)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\framework\constant_op.py", line 102, in convert_to_eager_tensor
+    return ops.EagerTensor(value, ctx.device_name, dtype)
+KeyboardInterrupt
+C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\sanic_cors\extension.py:39: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  SANIC_VERSION = LooseVersion(sanic_version)
+2023-02-17 18:48:24 INFO     rasa_sdk.endpoint  - Starting action endpoint C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\sanic_cors\extension.py:39: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  SANIC_VERSION = LooseVersion(sanic_version)
+C:\Users\admin\AppData\Roaming\Python\Python37\site-packages\redis\connection.py:68: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  hiredis_version = StrictVersion(hiredis.__version__)
+C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\matplotlib\__init__.py:169: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  if LooseVersion(module.__version__) < minver:
+C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\setuptools\_distutils\version.py:346: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  other = LooseVersion(other)
+2023-02-17 18:48:33 INFO     root  - Starting Rasa server on http://0.0.0.0:5005
+C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\tracker_store.py:1005: SADeprecationWarning: Calling URL() directly is deprecated and will be disabled in a future release.  The public constructor for URL is now the URL.create() method.
+  query=query,
+2023-02-17 18:48:37 INFO     rasa.core.processor  - Loading model models\20230217-184353-persistent-hyperparameter.tar.gz...
+2023-02-17 18:48:37 INFO     rasa.nlu.utils.spacy_utils  - Trying to load SpaCy model with name 'en_core_web_md'.
+2023-02-17 18:48:40 INFO     rasa.nlu.utils.spacy_utils  - Trying to load SpaCy model with name 'en_core_web_md'.
+C:\Users\admin\AppData\Roaming\Python\Python37\site-packages\jsonpickle\ext\numpy.py:192: DeprecationWarning: `np.object` is a deprecated alias for the builtin `object`. To silence this warning, use `object` by itself. Doing this will not modify any behavior and is safe. 
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if dtype == np.object:
+[93mC:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\utils\train_utils.py:531: UserWarning: constrain_similarities is set to `False`. It is recommended to set it to `True` when using cross-entropy loss.
+  category=UserWarning,
+[0m[2023-02-17 18:49:19 +0530] [10844] [ERROR] Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1204, in run
+    serve_single(server_settings)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\sanic\server\runners.py", line 206, in serve_single
+    serve(**server_settings)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\sanic\server\runners.py", line 130, in serve
+    loop.run_until_complete(app._server_event("init", "before"))
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 574, in run_until_complete
+    self.run_forever()
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 541, in run_forever
+    self._run_once()
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1786, in _run_once
+    handle._run()
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 2007, in _server_event
+    "loop": loop,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\sanic\signals.py", line 191, in dispatch
+    return await dispatch
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\sanic\signals.py", line 161, in _dispatch
+    retval = await maybe_coroutine
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1524, in _listener
+    await maybe_coro
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\run.py", line 251, in load_agent_on_start
+    loop=loop,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\agent.py", line 254, in load_agent
+    agent.load_model(model_path)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\agent.py", line 358, in load_model
+    http_interpreter=self.http_interpreter,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\processor.py", line 97, in __init__
+    model_path
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\processor.py", line 126, in _load_model
+    DaskGraphRunner,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\engine\loader.py", line 33, in load_predict_graph_runner
+    graph_schema=model_metadata.predict_schema, model_id=model_metadata.model_id
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\engine\runner\dask.py", line 51, in create
+    return cls(graph_schema, model_storage, execution_context, hooks)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\engine\runner\dask.py", line 38, in __init__
+    graph_schema, model_storage, execution_context, hooks
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\engine\runner\dask.py", line 64, in _instantiate_nodes
+    for node_name, schema_node in graph_schema.nodes.items()
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\engine\runner\dask.py", line 64, in <dictcomp>
+    for node_name, schema_node in graph_schema.nodes.items()
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\engine\graph.py", line 545, in from_schema_node
+    hooks=hooks,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\engine\graph.py", line 379, in __init__
+    self._load_component()
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\engine\graph.py", line 395, in _load_component
+    **kwargs,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\policies\ted_policy.py", line 1054, in load
+    model_path, config, model_storage, resource, execution_context
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\policies\ted_policy.py", line 1102, in _load
+    execution_context.is_finetuning,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\policies\ted_policy.py", line 1157, in _load_tf_model
+    finetune_mode=should_finetune,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\utils\tensorflow\models.py", line 431, in load
+    model.fit(data_generator, verbose=False)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\keras\utils\traceback_utils.py", line 64, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\utils\tensorflow\temp_keras_modules.py", line 388, in fit
+    tmp_logs = self.train_function(iterator)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\util\traceback_utils.py", line 150, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\def_function.py", line 915, in __call__
+    result = self._call(*args, **kwds)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\def_function.py", line 980, in _call
+    return self._stateless_fn(*args, **kwds)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\function.py", line 2955, in __call__
+    filtered_flat_args) = self._maybe_define_function(args, kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\function.py", line 3292, in _maybe_define_function
+    graph_function = self._create_graph_function(args, kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\function.py", line 3140, in _create_graph_function
+    capture_by_value=self._capture_by_value),
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\framework\func_graph.py", line 1161, in func_graph_from_py_func
+    func_outputs = python_func(*func_args, **func_kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\def_function.py", line 677, in wrapped_fn
+    out = weak_wrapped_fn().__wrapped__(*args, **kwds)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\framework\func_graph.py", line 1143, in autograph_handler
+    user_requested=True,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 439, in converted_call
+    result = converted_f(*effective_args, **kwargs)
+  File "C:\Users\admin\AppData\Local\Temp\__autograph_generated_file5e8zpjtp.py", line 15, in tf__train_function
+    retval_ = ag__.converted_call(ag__.ld(step_function), (ag__.ld(self), ag__.ld(iterator)), None, fscope)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 331, in converted_call
+    return _call_unconverted(f, args, kwargs, options, False)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 459, in _call_unconverted
+    return f(*args)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\keras\engine\training.py", line 1010, in step_function
+    outputs = model.distribute_strategy.run(run_step, args=(data,))
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\distribute\distribute_lib.py", line 1312, in run
+    return self._extended.call_for_each_replica(fn, args=args, kwargs=kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\distribute\distribute_lib.py", line 2888, in call_for_each_replica
+    return self._call_for_each_replica(fn, args, kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\distribute\distribute_lib.py", line 3689, in _call_for_each_replica
+    return fn(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 689, in wrapper
+    return converted_call(f, args, kwargs, options=options)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 377, in converted_call
+    return _call_unconverted(f, args, kwargs, options)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 458, in _call_unconverted
+    return f(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\keras\engine\training.py", line 1000, in run_step
+    outputs = model.train_step(data)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\utils\tensorflow\models.py", line 151, in train_step
+    prediction_loss = self.batch_loss(batch_in)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\policies\ted_policy.py", line 1991, in batch_loss
+    tf_batch_data
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\policies\ted_policy.py", line 1790, in _process_batch_data
+    ) = self._encode_features_per_attribute(tf_batch_data, attribute)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\policies\ted_policy.py", line 1484, in _encode_features_per_attribute
+    lambda: self._encode_fake_features_per_attribute(tf_batch_data, attribute),
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\util\traceback_utils.py", line 150, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\util\dispatch.py", line 1082, in op_dispatch_handler
+    return dispatch_target(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\control_flow_ops.py", line 1452, in cond_for_tf_v2
+    return cond(pred, true_fn=true_fn, false_fn=false_fn, strict=True, name=name)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\util\traceback_utils.py", line 150, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\util\dispatch.py", line 1082, in op_dispatch_handler
+    return dispatch_target(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\util\deprecation.py", line 548, in new_func
+    return func(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\control_flow_ops.py", line 1265, in cond
+    return cond_v2.cond_v2(pred, true_fn, false_fn, name)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\cond_v2.py", line 102, in cond_v2
+    name=scope)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\cond_v2.py", line 295, in _build_cond
+    tensors = util.run_as_function_for_tape_gradients(_make_op, cond_inputs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\control_flow_util_v2.py", line 373, in run_as_function_for_tape_gradients
+    attributes=dict(func_name="cflow_gradient_wrapper"))(inputs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\function.py", line 2957, in __call__
+    filtered_flat_args, captured_inputs=graph_function.captured_inputs)  # pylint: disable=protected-access
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\function.py", line 1859, in _call_flat
+    forward_function, args_with_tangents = forward_backward.forward()
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\function.py", line 1400, in forward
+    self._inference_args, self._input_tangents)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\function.py", line 1131, in forward
+    self._forward_and_backward_functions(inference_args, input_tangents))
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\function.py", line 1356, in _forward_and_backward_functions
+    outputs, inference_args, input_tangents)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\function.py", line 855, in _build_functions_for_outputs
+    src_graph=self._func_graph)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\gradients_util.py", line 680, in _GradientsHelper
+    lambda: grad_fn(op, *out_grads))
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\gradients_util.py", line 328, in _MaybeCompile
+    return grad_fn()  # Exit early
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\gradients_util.py", line 680, in <lambda>
+    lambda: grad_fn(op, *out_grads))
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\cond_v2.py", line 185, in _IfGrad
+    building_gradient=True,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\cond_v2.py", line 305, in _build_cond
+    tensors = [array_ops.identity(t) for t in tensors]
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\cond_v2.py", line 305, in <listcomp>
+    tensors = [array_ops.identity(t) for t in tensors]
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\util\traceback_utils.py", line 150, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\util\dispatch.py", line 1082, in op_dispatch_handler
+    return dispatch_target(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\array_ops.py", line 287, in identity
+    ret = gen_array_ops.identity(input, name=name)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\gen_array_ops.py", line 4077, in identity
+    "Identity", input=input, name=name)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 742, in _apply_op_helper
+    attrs=attr_protos, op_def=op_def)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\framework\func_graph.py", line 695, in _create_op_internal
+    compute_device)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\framework\ops.py", line 3785, in _create_op_internal
+    self._create_op_helper(ret, compute_device=compute_device)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\util\lock_util.py", line 130, in __exit__
+    self._lock.release(self._group_id)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\util\lock_util.py", line 102, in release
+    self._ready.notify_all()
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\threading.py", line 365, in notify_all
+    self.notify(len(self._waiters))
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\threading.py", line 348, in notify
+    waiters_to_notify = _deque(_islice(all_waiters, n))
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\admin\anaconda3\envs\rasa\Scripts\rasa.exe\__main__.py", line 7, in <module>
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\__main__.py", line 125, in main
+    cmdline_arguments.func(cmdline_arguments)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\cli\run.py", line 93, in run
+    rasa.run(**vars(args))
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\api.py", line 61, in run
+    **kwargs,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\run.py", line 230, in serve_application
+    workers=number_of_workers,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1204, in run
+    serve_single(server_settings)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\sanic\server\runners.py", line 206, in serve_single
+    serve(**server_settings)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\sanic\server\runners.py", line 130, in serve
+    loop.run_until_complete(app._server_event("init", "before"))
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 574, in run_until_complete
+    self.run_forever()
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 541, in run_forever
+    self._run_once()
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1786, in _run_once
+    handle._run()
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 2007, in _server_event
+    "loop": loop,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\sanic\signals.py", line 191, in dispatch
+    return await dispatch
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\sanic\signals.py", line 161, in _dispatch
+    retval = await maybe_coroutine
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1524, in _listener
+    await maybe_coro
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\run.py", line 251, in load_agent_on_start
+    loop=loop,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\agent.py", line 254, in load_agent
+    agent.load_model(model_path)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\agent.py", line 358, in load_model
+    http_interpreter=self.http_interpreter,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\processor.py", line 97, in __init__
+    model_path
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\processor.py", line 126, in _load_model
+    DaskGraphRunner,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\engine\loader.py", line 33, in load_predict_graph_runner
+    graph_schema=model_metadata.predict_schema, model_id=model_metadata.model_id
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\engine\runner\dask.py", line 51, in create
+    return cls(graph_schema, model_storage, execution_context, hooks)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\engine\runner\dask.py", line 38, in __init__
+    graph_schema, model_storage, execution_context, hooks
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\engine\runner\dask.py", line 64, in _instantiate_nodes
+    for node_name, schema_node in graph_schema.nodes.items()
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\engine\runner\dask.py", line 64, in <dictcomp>
+    for node_name, schema_node in graph_schema.nodes.items()
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\engine\graph.py", line 545, in from_schema_node
+    hooks=hooks,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\engine\graph.py", line 379, in __init__
+    self._load_component()
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\engine\graph.py", line 395, in _load_component
+    **kwargs,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\policies\ted_policy.py", line 1054, in load
+    model_path, config, model_storage, resource, execution_context
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\policies\ted_policy.py", line 1102, in _load
+    execution_context.is_finetuning,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\policies\ted_policy.py", line 1157, in _load_tf_model
+    finetune_mode=should_finetune,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\utils\tensorflow\models.py", line 431, in load
+    model.fit(data_generator, verbose=False)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\keras\utils\traceback_utils.py", line 64, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\utils\tensorflow\temp_keras_modules.py", line 388, in fit
+    tmp_logs = self.train_function(iterator)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\util\traceback_utils.py", line 150, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\def_function.py", line 915, in __call__
+    result = self._call(*args, **kwds)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\def_function.py", line 980, in _call
+    return self._stateless_fn(*args, **kwds)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\function.py", line 2955, in __call__
+    filtered_flat_args) = self._maybe_define_function(args, kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\function.py", line 3292, in _maybe_define_function
+    graph_function = self._create_graph_function(args, kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\function.py", line 3140, in _create_graph_function
+    capture_by_value=self._capture_by_value),
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\framework\func_graph.py", line 1161, in func_graph_from_py_func
+    func_outputs = python_func(*func_args, **func_kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\def_function.py", line 677, in wrapped_fn
+    out = weak_wrapped_fn().__wrapped__(*args, **kwds)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\framework\func_graph.py", line 1143, in autograph_handler
+    user_requested=True,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 439, in converted_call
+    result = converted_f(*effective_args, **kwargs)
+  File "C:\Users\admin\AppData\Local\Temp\__autograph_generated_file5e8zpjtp.py", line 15, in tf__train_function
+    retval_ = ag__.converted_call(ag__.ld(step_function), (ag__.ld(self), ag__.ld(iterator)), None, fscope)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 331, in converted_call
+    return _call_unconverted(f, args, kwargs, options, False)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 459, in _call_unconverted
+    return f(*args)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\keras\engine\training.py", line 1010, in step_function
+    outputs = model.distribute_strategy.run(run_step, args=(data,))
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\distribute\distribute_lib.py", line 1312, in run
+    return self._extended.call_for_each_replica(fn, args=args, kwargs=kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\distribute\distribute_lib.py", line 2888, in call_for_each_replica
+    return self._call_for_each_replica(fn, args, kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\distribute\distribute_lib.py", line 3689, in _call_for_each_replica
+    return fn(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 689, in wrapper
+    return converted_call(f, args, kwargs, options=options)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 377, in converted_call
+    return _call_unconverted(f, args, kwargs, options)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 458, in _call_unconverted
+    return f(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\keras\engine\training.py", line 1000, in run_step
+    outputs = model.train_step(data)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\utils\tensorflow\models.py", line 151, in train_step
+    prediction_loss = self.batch_loss(batch_in)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\policies\ted_policy.py", line 1991, in batch_loss
+    tf_batch_data
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\policies\ted_policy.py", line 1790, in _process_batch_data
+    ) = self._encode_features_per_attribute(tf_batch_data, attribute)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\policies\ted_policy.py", line 1484, in _encode_features_per_attribute
+    lambda: self._encode_fake_features_per_attribute(tf_batch_data, attribute),
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\util\traceback_utils.py", line 150, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\util\dispatch.py", line 1082, in op_dispatch_handler
+    return dispatch_target(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\control_flow_ops.py", line 1452, in cond_for_tf_v2
+    return cond(pred, true_fn=true_fn, false_fn=false_fn, strict=True, name=name)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\util\traceback_utils.py", line 150, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\util\dispatch.py", line 1082, in op_dispatch_handler
+    return dispatch_target(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\util\deprecation.py", line 548, in new_func
+    return func(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\control_flow_ops.py", line 1265, in cond
+    return cond_v2.cond_v2(pred, true_fn, false_fn, name)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\cond_v2.py", line 102, in cond_v2
+    name=scope)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\cond_v2.py", line 295, in _build_cond
+    tensors = util.run_as_function_for_tape_gradients(_make_op, cond_inputs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\control_flow_util_v2.py", line 373, in run_as_function_for_tape_gradients
+    attributes=dict(func_name="cflow_gradient_wrapper"))(inputs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\function.py", line 2957, in __call__
+    filtered_flat_args, captured_inputs=graph_function.captured_inputs)  # pylint: disable=protected-access
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\function.py", line 1859, in _call_flat
+    forward_function, args_with_tangents = forward_backward.forward()
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\function.py", line 1400, in forward
+    self._inference_args, self._input_tangents)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\function.py", line 1131, in forward
+    self._forward_and_backward_functions(inference_args, input_tangents))
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\function.py", line 1356, in _forward_and_backward_functions
+    outputs, inference_args, input_tangents)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\eager\function.py", line 855, in _build_functions_for_outputs
+    src_graph=self._func_graph)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\gradients_util.py", line 680, in _GradientsHelper
+    lambda: grad_fn(op, *out_grads))
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\gradients_util.py", line 328, in _MaybeCompile
+    return grad_fn()  # Exit early
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\gradients_util.py", line 680, in <lambda>
+    lambda: grad_fn(op, *out_grads))
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\cond_v2.py", line 185, in _IfGrad
+    building_gradient=True,
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\cond_v2.py", line 305, in _build_cond
+    tensors = [array_ops.identity(t) for t in tensors]
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\cond_v2.py", line 305, in <listcomp>
+    tensors = [array_ops.identity(t) for t in tensors]
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\util\traceback_utils.py", line 150, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\util\dispatch.py", line 1082, in op_dispatch_handler
+    return dispatch_target(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\array_ops.py", line 287, in identity
+    ret = gen_array_ops.identity(input, name=name)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\ops\gen_array_ops.py", line 4077, in identity
+    "Identity", input=input, name=name)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 742, in _apply_op_helper
+    attrs=attr_protos, op_def=op_def)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\framework\func_graph.py", line 695, in _create_op_internal
+    compute_device)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\framework\ops.py", line 3785, in _create_op_internal
+    self._create_op_helper(ret, compute_device=compute_device)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\util\lock_util.py", line 130, in __exit__
+    self._lock.release(self._group_id)
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\tensorflow\python\util\lock_util.py", line 102, in release
+    self._ready.notify_all()
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\threading.py", line 365, in notify_all
+    self.notify(len(self._waiters))
+  File "C:\Users\admin\anaconda3\envs\rasa\lib\threading.py", line 348, in notify
+    waiters_to_notify = _deque(_islice(all_waiters, n))
+KeyboardInterrupt
+C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\sanic_cors\extension.py:39: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  SANIC_VERSION = LooseVersion(sanic_version)
+2023-02-17 18:49:32 INFO     rasa_sdk.endpoint  - Starting action endpoint [17/Feb/2023 18:52:08] "GET / HTTP/1.1" 200 9579
+[17/Feb/2023 18:53:03] "GET / HTTP/1.1" 200 9579
+[17/Feb/2023 18:53:16] "GET / HTTP/1.1" 200 9579
+kaging.version instead.
+  SANIC_VERSION = LooseVersion(sanic_version)
+C:\Users\admin\AppData\Roaming\Python\Python37\site-packages\redis\connection.py:68: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  hiredis_version = StrictVersion(hiredis.__version__)
+C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\matplotlib\__init__.py:169: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  if LooseVersion(module.__version__) < minver:
+C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\setuptools\_distutils\version.py:346: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  other = LooseVersion(other)
+2023-02-17 18:49:42 INFO     root  - Starting Rasa server on http://0.0.0.0:5005
+C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\tracker_store.py:1005: SADeprecationWarning: Calling URL() directly is deprecated and will be disabled in a future release.  The public constructor for URL is now the URL.create() method.
+  query=query,
+2023-02-17 18:49:45 INFO     rasa.core.processor  - Loading model models\20230217-184353-persistent-hyperparameter.tar.gz...
+2023-02-17 18:49:45 INFO     rasa.nlu.utils.spacy_utils  - Trying to load SpaCy model with name 'en_core_web_md'.
+2023-02-17 18:49:49 INFO     rasa.nlu.utils.spacy_utils  - Trying to load SpaCy model with name 'en_core_web_md'.
+C:\Users\admin\AppData\Roaming\Python\Python37\site-packages\jsonpickle\ext\numpy.py:192: DeprecationWarning: `np.object` is a deprecated alias for the builtin `object`. To silence this warning, use `object` by itself. Doing this will not modify any behavior and is safe. 
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if dtype == np.object:
+[93mC:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\utils\train_utils.py:531: UserWarning: constrain_similarities is set to `False`. It is recommended to set it to `True` when using cross-entropy loss.
+  category=UserWarning,
+[0m2023-02-17 18:50:24 WARNING  rasa.shared.utils.common  - The UnexpecTED Intent Policy is currently experimental and might change or be removed in the future \U0001f52c Please share your feedback on it in the forum (https://forum.rasa.com) to help us make this feature ready for production.
+2023-02-17 18:50:24 INFO     root  - Rasa server is up and running.
+C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\sanic_cors\extension.py:39: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  SANIC_VERSION = LooseVersion(sanic_version)
+2023-02-17 19:06:06 INFO     rasa_sdk.endpoint  - Starting action endpoint [17/Feb/2023 19:07:40] "GET / HTTP/1.1" 200 9579
+[17/Feb/2023 19:10:03] "GET / HTTP/1.1" 200 9579
+[17/Feb/2023 19:10:09] "GET / HTTP/1.1" 200 9579
+kaging.version instead.
+  SANIC_VERSION = LooseVersion(sanic_version)
+C:\Users\admin\AppData\Roaming\Python\Python37\site-packages\redis\connection.py:68: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  hiredis_version = StrictVersion(hiredis.__version__)
+C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\matplotlib\__init__.py:169: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  if LooseVersion(module.__version__) < minver:
+C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\setuptools\_distutils\version.py:346: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  other = LooseVersion(other)
+2023-02-17 19:06:16 INFO     root  - Starting Rasa server on http://0.0.0.0:5005
+C:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\core\tracker_store.py:1005: SADeprecationWarning: Calling URL() directly is deprecated and will be disabled in a future release.  The public constructor for URL is now the URL.create() method.
+  query=query,
+2023-02-17 19:06:19 INFO     rasa.core.processor  - Loading model models\20230217-190404-naive-lime.tar.gz...
+2023-02-17 19:06:19 INFO     rasa.nlu.utils.spacy_utils  - Trying to load SpaCy model with name 'en_core_web_md'.
+2023-02-17 19:06:23 INFO     rasa.nlu.utils.spacy_utils  - Trying to load SpaCy model with name 'en_core_web_md'.
+C:\Users\admin\AppData\Roaming\Python\Python37\site-packages\jsonpickle\ext\numpy.py:192: DeprecationWarning: `np.object` is a deprecated alias for the builtin `object`. To silence this warning, use `object` by itself. Doing this will not modify any behavior and is safe. 
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if dtype == np.object:
+[93mC:\Users\admin\anaconda3\envs\rasa\lib\site-packages\rasa\utils\train_utils.py:531: UserWarning: constrain_similarities is set to `False`. It is recommended to set it to `True` when using cross-entropy loss.
+  category=UserWarning,
+[0m2023-02-17 19:07:01 WARNING  rasa.shared.utils.common  - The UnexpecTED Intent Policy is currently experimental and might change or be removed in the future \U0001f52c Please share your feedback on it in the forum (https://forum.rasa.com) to help us make this feature ready for production.
+2023-02-17 19:07:01 INFO     root  - Rasa server is up and running.
