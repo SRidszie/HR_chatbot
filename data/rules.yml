@@ -1,0 +1,87 @@
+version: "3.1"
+
+rules:
+  - rule: welcome user
+    conversation_start: true  # this rule only applies at the beginning of a conversation
+    steps:
+      - intent: greet
+      - action: action_greet
+
+  - rule: service category
+    steps:
+      - intent: services
+      - action: action_services
+
+  - rule: ams
+    steps:
+      - intent: ams
+      # - action: utter_ams
+      - action: utter_ams
+
+  - rule: Activate form
+    steps:
+    - intent: expert_speak
+    - action: speak_with_expert_form
+    - active_loop: speak_with_expert_form
+
+  - rule: Submit form
+    condition:
+    # Condition that form is active.
+    - active_loop: speak_with_expert_form
+    steps:
+    # Form is deactivated
+    - action: speak_with_expert_form
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+      # The actions we want to run when the form is submitted.
+    - action: utter_submit
+    - action: utter_slots_values
+
+  # - rule: Submit form
+  #   steps:
+  #   - intent: expert_speak
+  #   - action: speak_with_expert_form
+  #   - active_loop: speak_with_expert_form
+  #   - slot_was_set:
+  #     - requested_slot: null
+  #   - action: utter_form_submit
+
+  - rule: Say goodbye anytime the user says goodbye
+    steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+  - rule: out-of-scope
+    steps:
+    - intent: out_of_scope
+    - action: utter_out_of_scope
+
+  # - rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  #   steps:
+  #   - intent: nlu_fallback
+  #   - action: utter_please_rephrase
+
+  - rule: Implementation of the Two-Stage-Fallback
+    steps:
+    - intent: nlu_fallback
+    - action: action_two_stage_fallback
+    - active_loop: action_two_stage_fallback
+
+# - rule: Say 'I am a bot' anytime the user challenges
+#   steps:
+#   - intent: bot_challenge
+#   - action: utter_iamabot
+
+
+  # - rule: Example of an unhappy path
+  #   condition:
+  #   # Condition that form is active.
+  #   - active_loop: speak_with_expert_form
+  #   steps:
+  #   # This unhappy path handles the case of an intent `chitchat`.
+  #   # - intent: goodbye
+  #   # - action: utter_goodbye
+  #   # Return to form after handling the `chitchat` intent
+  #   - action: speak_with_expert_form
+  #   - active_loop: speak_with_expert_form

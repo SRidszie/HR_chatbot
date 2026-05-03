@@ -1,0 +1,52 @@
+version: "3.1"
+
+stories:
+  # - story: Services category
+  #   steps:
+  #   - intent: greet
+  #   - action: utter_greet
+  #   - intent: services
+  #   - action: utter_services
+  #   - intent: expert_yes
+  #   - action: utter_expert_yes
+  #   - intent: contact_us
+  #   - action: utter_contact_us
+
+  - story: happy path
+    steps:
+    - intent: greet
+    - action: action_greet
+    - intent: services
+    - action: action_services
+    - intent: ams
+    # - action: utter_ams
+    - action: utter_ams
+    - intent: expert_speak
+    # - action: utter_expert_query
+    - action: speak_with_expert_form
+    # - action: utter_ask_name
+    # - action: utter_ask_email
+    # - action: utter_ask_phone
+    # - action: utter_ask_enquiry_type
+    - active_loop: speak_with_expert_form
+
+
+    # - action: utter_expert_query
+    # - action: utter_form_submit
+    # - action: utter_submit
+    # - action: utter_slots_values
+    - intent: goodbye
+    - action: utter_goodbye
+
+  # - story: User interrupts the form and doesn't want to continue
+  #   steps:
+  #   - intent: expert_speak
+  #   - action: speak_with_expert_form
+  #   - active_loop: speak_with_expert_form
+  #   - intent: stop
+  #   - action: utter_ask_continue
+  #   - intent: stop
+  #   - action: action_deactivate_loop
+  #   - active_loop: null
+
+

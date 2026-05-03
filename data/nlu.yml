@@ -1,0 +1,108 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: job_candidate
+  examples: |
+    - job candidate
+    - looking for job
+    - employment opportunity
+- intent: partner_collaborate
+  examples: |
+    - partner
+    - collaboration
+    - partnership opportunity
+- intent: client_support
+  examples: |
+    - client
+    - customer
+    - support
+- intent: services
+  examples: |
+    - services
+    - what services do you offer
+    - service offerings
+- intent: solutions
+  examples: |
+    - solutions
+    - what solutions do you offer
+    - solution offerings
+- intent: expert_speak
+  examples: |
+    - Would you also like to speak with an expert?
+    - speak with expert
+    - connect to expert
+    - discuss with expert
+    - expert talk
+    - connect with technical expert
+- intent: expert_yes
+  examples: |
+    - yes
+    - sure
+    - okay
+    - why not
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - yes please
+    - yes pls
+    - y pls
+- intent: expert_no
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: contact_us
+  examples: |
+    - contact us
+    - fill out form
+    - send form
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: ams
+  examples: |
+    - What AMS services do you offer?
+    - Can you provide more information about AMS?
+    - I'm interested in your AMS offerings.
+    - How can your AMS services benefit my business?
+    - Can you help me choose the right AMS solution for my business?
+    - What is the pricing for your AMS services?
+    - How can I get started with your AMS services?
+    - Do you offer AMS support and maintenance?
+    - Can you give me some examples of AMS implementations you've done in the past?
+
+
+- intent: out_of_scope
+  examples: |
+    - I want to order food
+    - What is 2 + 2?
+    - Who's the US President?    
